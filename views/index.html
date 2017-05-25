@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type="text/css">
+
+<html>
+   <head>
+      <script type='text/javascript' src="libs/jquery-3.2.1.min.js" defer></script>
+      <script type='text/javascript' src='libs/knockout-3.4.2.js' defer></script>
+      <script type='text/javascript' src='index.js' defer></script>
+      <title>RandomNumbers - Generate a list of unique random numbers in configurable intervals</title>
+   </head>
+
+    <body>
+      <div class="container">
+        <img src="img/logo.png" />
+        <br />
+        <p class="logo-text">RandomNumbers</p>
+      </div>
+
+      <!-- Input Form -->
+      <div class="container">
+         <form id="random-form" data-bind="submit: generate" class="form-horizontal" role="form">
+            Generate <input type="number" data-bind="value: count" id="count" min="1" max="10000000" oninput="setCustomValidity('')" required>
+            unique random integers (maximum 10,000).<br>
+            Each integer should have a value between 
+            <input type="number" data-bind="value: min" id="min" min="-10000000" oninput="setCustomValidity('')" required> and
+            <input type="number" data-bind="value: max" id="max" max="10000000" oninput="setCustomValidity('')" required>
+            (both inclusive; limits ±10,000,000).<br>
+            <button type="submit" class="btn" value="Submit">GENERATE</button>
+         </form>
+      </div>
+
+      <!-- Results -->
+      <div class="container list" >
+        <h4 data-bind="text: header"></h4>
+        <h4 class="error" data-bind="text: error"></h4>
+        <ul data-bind="foreach: numbers">
+            <li class="numbers-list">
+                <span data-bind="text: $data"> </span>
+            </li>
+        </ul>
+      </div>
+   </body>
+
+</html>

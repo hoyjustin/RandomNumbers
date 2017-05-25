@@ -1,0 +1,24 @@
+{
+  "name": "RandomNumbers",
+  "version": "1.0.0",
+  "private": true,
+  "description": "App that generates a list of unique random numbers in configurable intervals",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "engines": {
+    "node": "6.9.4",
+    "npm": "4.2.0"
+  },
+  "author": "Justin Hoy",
+  "dependencies": {
+    "body-parser": "~1.17.2",
+    "chai": "~3.5.0",
+    "chai-http": "~3.0.0",
+    "express": "~4.15.3",
+    "mocha": "~3.4.1",
+    "mongodb": "~2.2.26"
+  }
+}
