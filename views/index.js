@@ -8,9 +8,11 @@ $(document).ready(function(){
     self.header = ko.observable();
     self.error = ko.observable();
     self.numbers = ko.observableArray();
-
-    self.generate = function() {
-
+    
+  /**
+   * Submits the form to the server and prints the response data
+   */
+    self.submit = function() {
       function postForm(input) {
         $.post('/randomGen', input)
         .done(function (data) {
@@ -34,6 +36,6 @@ $(document).ready(function(){
       postForm(input);
     }
   }
-  
+  // Default input boxes
   ko.applyBindings(new RandomNumberViewModel('10000','1','10000'));
 });

@@ -72,16 +72,14 @@
 
     if (!isInt(count) || !isInt(min) || !isInt(max))
     {
-      res.status(400).send('Input must be an integer');
+      res.status(400).end('Input must be an integer');
     }
     else if (max < min) {
-      console.log(typeof max);
-      console.log(typeof min);
-      res.status(400).send('Min must be less than or equal to max');
+      res.status(400).end('Min must be less than or equal to max');
     }
     else if (count > (max - min + 1))
     {
-      res.status(400).send('Amount of random numbers requested must be less ' +
+      res.status(400).end('Amount of random numbers requested must be less ' +
          'or equal to the amount between min and max');
     }
     else {

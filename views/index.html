@@ -19,7 +19,7 @@
 
       <!-- Input Form -->
       <div class="container">
-         <form id="random-form" data-bind="submit: generate" class="form-horizontal" role="form">
+         <form id="random-form" data-bind="submit: submit" class="form-horizontal" role="form">
             Generate <input type="number" data-bind="value: count" id="count" min="1" max="10000000" oninput="setCustomValidity('')" required>
             unique random integers (maximum 10,000).<br>
             Each integer should have a value between 
