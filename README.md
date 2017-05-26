@@ -14,8 +14,8 @@ In order to use RandomNumbers, you should have the following installed:
 
 Installation & Startup
 =========================
-1. Install prerequisite packages by running 'npm install' at the RandomNumbers root directory
-2. To start the application, run: 'node server'
+1. Run 'npm install' at the RandomNumbers root directory to install prerequisite packages
+2. Run 'node server' to start the application
 3. Point a browser to 'localhost:3000' and you're up and running!
 
 * Mocha tests can be done through running 'npm test'
