@@ -1,15 +1,16 @@
+Author: Justin Hoy
+
 Overview
 =========================
 RandomNumbers generates a list of unique random numbers in configurable intervals (inclusive).
-Author: Justin Hoy
+A scatterplot is provided to show the distribution of the generated numbers.
 
 Prerequisites
 =========================
 In order to use RandomNumbers, you should have the following installed:
 
-- [Node.js](https://nodejs.org/) v6.9.4
-- [NPM](https://nodejs.org/) v4.2.0
-
+- [Node.js](https://www.nodejs.org/) v6.9.4
+- [NPM](https://www.npmjs.com/) v4.2.0
 
 Installation & Startup
 =========================
@@ -46,5 +47,6 @@ Packages Used
 - Knockout
 - Express
 - BodyParser
+- D3.js
 - Mocha
 - Chai

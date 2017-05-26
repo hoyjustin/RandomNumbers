@@ -3,13 +3,14 @@
 <link href="http://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type="text/css">
 
 <html>
-   <head>
+    <head>
       <script type='text/javascript' src="libs/jquery-3.2.1.min.js" defer></script>
       <script type='text/javascript' src='libs/knockout-3.4.2.js' defer></script>
       <script type='text/javascript' src='index.js' defer></script>
+      <script type='text/javascript' src='libs/d3.min.js' defer></script>
+      <script type='text/javascript' src='scatterplot.js' defer></script>
       <title>RandomNumbers - Generate a list of unique random numbers in configurable intervals</title>
-   </head>
-
+    </head>
     <body>
       <div class="container">
         <img src="img/logo.png" />
@@ -29,6 +30,9 @@
             <button type="submit" class="btn" value="Submit">GENERATE</button>
          </form>
       </div>
+
+      <!-- Scatterplot -->
+      <div class="svg-container" id= "scatterplot-container"></div>
 
       <!-- Results -->
       <div class="container list" >

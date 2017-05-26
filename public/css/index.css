@@ -16,19 +16,19 @@ img {
 	display: block;
 }
 
-.logo-text { /* Styling for the logo text */
+.logo-text {
 	padding: 0;
 	margin: -25px 0 0 0;
 	font-weight: 500;
 	font-size: 50px;
-	color: #55acee;
+	color: #398ece;
 }
 
 /****** Button Styling ******/
 .btn {
 	margin: 15px 0px;
 	color: white;
-	background-color: #55acee;
+	background-color: #398ece;
 	display: inline-block;
 	border: 0;
 	font-size: 16px;
@@ -37,19 +37,20 @@ img {
 	width: 150px;
 }
 
-.btn:focus {	/* Remove outline when hovering over button */
-	outline: none;
-}
-
 .btn:active {	/* Scale the button down by 10% when clicking on button */
 	transform: scale(0.9, 0.9);
 	-webkit-transform: scale(0.9, 0.9);
 	-moz-transform: scale(0.9, 0.9);
 }
 
-.btn-delete {	/* Styling for delete button */
-	background-color: #ECEFF1;
-	color: #212121;
+/****** Scatterplot Styling ******/
+.svg-container {
+	display: block;
+	padding: 10px 10% 10px 10%;
+}
+
+circle {
+    fill: #398ece;
 }
 
 /****** Numbers Table Styling ******/

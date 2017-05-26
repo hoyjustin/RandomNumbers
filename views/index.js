@@ -8,7 +8,7 @@ $(document).ready(function(){
     self.header = ko.observable();
     self.error = ko.observable();
     self.numbers = ko.observableArray();
-    
+
   /**
    * Submits the form to the server and prints the response data
    */
@@ -16,26 +16,28 @@ $(document).ready(function(){
       function postForm(input) {
         $.post('/randomGen', input)
         .done(function (data) {
-          self.numbers(data);
+          Scatterplot(data, input.min, input.max);
           self.header('Your Random Number(s):');
+          self.numbers(data);
         })
         .fail(function (xhr, textStatus, errorThrown) {
           self.error(xhr.responseText);
         });
       }
-
-      var input = 
-      {
+      //clear existing elements on screen
+      self.header('');
+      self.error('');
+      self.numbers([]);
+      //send data
+      var input = {
         count : self.count(),
         min : self.min(),
         max : self.max()
       };
-      self.header('');
-      self.error('');
-      self.numbers([]);
       postForm(input);
     }
+
   }
-  // Default input boxes
+  // Default box input
   ko.applyBindings(new RandomNumberViewModel('10000','1','10000'));
 });
