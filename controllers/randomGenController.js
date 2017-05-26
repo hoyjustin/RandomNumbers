@@ -66,15 +66,17 @@
    * @return {Number[]} randomNumbers
    */
   var randomList = function(req, res) {
-    var count = req.body['count'];
-    var min = req.body['min'];
-    var max = req.body['max'];
+    var count = parseInt(req.body['count'], 10);
+    var min = parseInt(req.body['min'], 10);
+    var max = parseInt(req.body['max'], 10);
 
     if (!isInt(count) || !isInt(min) || !isInt(max))
     {
       res.status(400).send('Input must be an integer');
     }
     else if (max < min) {
+      console.log(typeof max);
+      console.log(typeof min);
       res.status(400).send('Min must be less than or equal to max');
     }
     else if (count > (max - min + 1))
