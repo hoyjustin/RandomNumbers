@@ -35,7 +35,7 @@ This improves upon more naive approaches of generating the random numbers direct
 and keeping a record, as duplicates cause unneccessary computations.
 
 
-Tests are done upon the router to ensure that data is returned only with valid input.
+Tests are done upon the router to ensure that api data is returned only with valid input.
 
 Tests are also done upon the controller and its helper functions to validate that
 the result is the right amount, to be within the interval, and seemingly random.
